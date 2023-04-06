@@ -1,14 +1,18 @@
-const Rating = () => {
+import Star from "@/app/components/Star";
+import calculateRating from "@/utils/calculateRating";
+import { Review } from "@prisma/client";
+
+const Rating = ({ reviews }: { reviews: Review[] }) => {
   return (
     <div className="flex items-end">
       <div className="ratings mt-2 flex items-center">
-        <p>*****</p>
-        <p className="text-reg ml-3">4.9</p>
+        <Star reviews={reviews} />
+        <p className="text-reg ml-3">{calculateRating(reviews).toFixed(1)}</p>
       </div>
       <div>
-        <p className="text-reg ml-4">600 Reviews</p>
+        <p className="text-reg ml-4">{reviews.length} Reviews</p>
       </div>
     </div>
   );
-}
-export default Rating
+};
+export default Rating;
