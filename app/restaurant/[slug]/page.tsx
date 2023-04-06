@@ -12,13 +12,12 @@ const RestaurantDetails = () => {
       <div className="bg-white w-[70%] rounded p-3 shadow">
         <RestaurantNavbar />
         <div className="mt-4 border-b pb-6">
-          <h1 className="font-bold text-6xl">Milesstone Grill</h1>
+          <h1 className="font-bold text-6xl">Milestone Grill</h1>
         </div>
         <Rating />
         <Description />
         <Images />
         <Reviews />
-        {/* REVIEWS */}
       </div>
       <div className="w-[27%] relative text-reg">
         <ReservationCard />
