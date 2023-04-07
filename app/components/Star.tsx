@@ -5,7 +5,7 @@ import { Review } from "@prisma/client";
 import calculateRating from "@/utils/calculateRating";
 import Image from "next/image";
 
-const Star = ({ reviews, rating }: { reviews: Review[], rating?: number }) => {
+const Star = ({ reviews, rating }: { reviews: Review[]; rating?: number }) => {
   const reviewRating = rating || calculateRating(reviews);
 
   const rendStars = () => {
